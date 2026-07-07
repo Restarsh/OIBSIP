@@ -1,0 +1,15 @@
+:root {
+    --primary-color: #4a2c2a;
+    --secondary-color: #8c6239;
+    --accent-color: #d4a76a;
+    --light-bg: #f8f4f0;
+    --dark-text: #2c1810;
+    --light-text: #fff;
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    
+}
