@@ -30,7 +30,6 @@ This is a static personal portfolio website showcasing skills, projects, and con
 - **Fonts**: Change the Google Fonts link or `font-family` in `style.css`.
 
 ## Credits
-- Avatar and background images via [Unsplash](https://unsplash.com) (placeholders).
 - Font: **Poppins** from Google Fonts.
 
 ---
