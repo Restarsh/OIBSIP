@@ -1,0 +1,233 @@
+:root {
+    --primary-color: #4a2c2a;
+    --accent-color: #d4a76a;
+    --bg-color: #f8f4f0;
+    --text-color: #2c1810;
+    --light-bg: #fff;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--light-bg);
+    font-weight: 300;
+    transition: color .3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/WebDev-L1-PersonalProtfolio/media/fdb7fc19-d412-45e1-8989-14777c451995\ \(1\).png') center/cover no-repeat;
+    color: var(--light-bg);
+    text-align: center;
+    padding: 8rem 2rem;    
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid var(--accent-color);
+}
+
+.hero h1{
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #e6b88c;
+    transform: translateY(-3px);
+}
+
+.section {
+    padding: 4rem 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.about p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.skill-item {
+    background-color: var(--light-bg);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0.2px 4px rgba(0,0,0,0.1);
+    font-weight: 500;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit), minmax(280px, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: var(--light-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin: 1.2rem;
+    font-size: 1.4rem;
+}
+
+.project-card p {
+    margin: 0 1.2rem 1.2rem;
+    color: var(--text-color);
+}
+
+.project-link {
+    display: inline-block;
+    margin: 0 1.2rem 1.8rem;
+    color: var(--accent-color);
+    font-width: 600;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: var(--primary-color);
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+}
+
+
+.contact-info a {
+    color: var(--accent-color);
+    word-break: break-all;
+}
+
+footer {
+    background-color:var(--primary-color);
+    color: var(--light-bg);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .role {
+        font-size: 1.2rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+}
