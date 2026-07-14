@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #4a2c2a;
+    --accent-color: #d4a76a;
+    --background-color: #f8f4f0;
+    --text-color: #2c1810;
+    --error-color: #d32f2f;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 460px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.input-group label {
+    flex: 1 1 100%;
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group select,
+.input-group button {
+    flex: 1 1 150px;
+    min-width: 100px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74,44,42,0.2);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5e3634;
+}
+
+.error {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    min-height: 1.2em;
+}
+
+.result-box {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+}
+
+.result-box h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.result-box p {
+    margin: 0.4rem 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .input-group input,
+    .input-group select,
+    .input-group button {
+        width: 100%;
+    }
+}
